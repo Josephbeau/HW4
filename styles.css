@@ -1,0 +1,67 @@
+/*
+File: index.html
+GUI Assignment: Creating a multiplication website where the user can input the start and end of a row
+and column for a multiplication table to be created dynamically for them on command.
+Joseph Beausoleil, UMass Lowell Computer Science, Joseph_Beausoleli@uml.student.edu
+What to submit: My HTML, CSS, and JS files along with github link
+Copyright (c) 2021 by Jospeh. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author.
+updated by JB on June 3, 2024
+*/
+
+table, tr, td{
+    border: 1px solid black;
+}
+
+div.dynam{
+    overflow: scroll;
+    float: left;
+    margin-left: 50PX;
+    height: 500px;
+    width: 500px;
+    border: 1px solid black;
+}
+
+form{
+    float: left;
+}
+
+#error{
+    color: red;
+    font-weight: bold;
+}
+
+#test{
+    font-weight: bold;
+}
+
+#mainBody{
+    border-top: 1px solid black;
+    padding-top: 10px;
+}
+
+tr:first-child{
+    background-color: black;
+    color: white;
+}
+
+td:first-child{
+    background-color: black;
+    color: white;
+}
+
+#parent{
+    margin-top: 550px;
+}
+
+a{
+    border: black solid 1px;
+    padding: 5px;
+    background-color: chocolate;
+    margin-bottom: 5px;
+    margin-right: 500px;
+}
+
+table.dynam{
+    margin: 15px;
+}

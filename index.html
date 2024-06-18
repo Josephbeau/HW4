@@ -1,0 +1,63 @@
+<!--
+File: index.html
+GUI Assignment: Creating a multiplication website where the user can input the start and end of a row
+and column for a multiplication table to be created dynamically for them on command.
+Joseph Beausoleil, UMass Lowell Computer Science, Joseph_Beausoleli@uml.student.edu
+What to submit: My HTML, CSS, and JS files along with github link
+Copyright (c) 2021 by Jospeh. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author.
+updated by JB on June 3, 2024
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Multiplication</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
+        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+    </head>
+    <body>
+        <h1>Multiplication Table</h1>
+        
+        <p id="errorMessage">Please enter a range of integers from -50 to 50. Please also make sure that the starting number is less than the ending number</p>
+        <p>Please enter the range of numbers you want to multiply and to multiply by for the table.</p>
+        <p id="test">Selectied Numbers: </p>
+        <div id="mainBody">
+            <form id="fill">
+                <label>Start for column</label><br>
+                <input type="text" id="SC" min="-50" max="50" value = "0" oninput= "this.form.SCR.value = this.value" required><br>
+                <input type="range" id="SCR" min="-50" max="50" oninput= "this.form.SC.value = this.value"><br>
+
+                <label>End for column</label><br>
+                <input type="text" id="EC" min="-50" max="50" value = "0" oninput= "this.form.ECR.value = this.value" required><br>
+                <input type="range" id="ECR" min="-50" max="50" oninput= "this.form.EC.value = this.value"><br>
+
+                <label>Start for Row</label><br>
+                <input type="text" id="SR" min="-50" max="50" value = "0" oninput= "this.form.SRR.value = this.value" required><br>
+                <input type="range" id="SRR" min="-50" max="50" oninput= "this.form.SR.value = this.value"><br>
+
+                <label>End for Row</label><br>
+                <input type="text" id="ER" min="-50" max="50" value = "0" oninput= "this.form.ERR.value = this.value" required><br>
+                <input type="range" id="ERR" min="-50" max="50" oninput= "this.form.ER.value = this.value"><br>
+
+                <button id="create" type="button" onclick="myClick()">Submit</button><br>
+            </form>
+            
+            <div class="dynam">
+                <table id="table">
+                </table>
+            </div>
+            <div id = "parent">
+                <ul>
+
+                </ul>
+            </div>
+            <form id="delete">
+                
+            </form>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
